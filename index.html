@@ -14,7 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="css/snow.css">
 
 	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+	
 	<script type="text/javascript" src="js/jquery.let_it_snow.js"></script>
 	<script type="text/javascript" src="js/garden.js"></script>
     <script type="text/javascript" src="js/functions.js"></script>
@@ -28,21 +28,24 @@
 		<div id="content">
 			<div id="code">
 				<span class="comments">/**</span><br />
-				<span class="space"/><span class="comments">* We are both Fudan SSers and programmers,</span><br />
-				<span class="space"/><span class="comments">* so I write some code to celebrate our 1st anniversary.</span><br />
+				<span class="space"/><span class="comments">* I am a programmer,</span><br />
+				<span class="space"/><span class="comments">* so I write some code to commemorate our love.</span><br />
 				<span class="space"/><span class="comments">*/</span><br />
 				Boy i = <span class="keyword">new</span> Boy(<span class="string">"Zer"</span>);<br />
 				Girl u = <span class="keyword">new</span> Girl(<span class="string">"Lynn"</span>);<br />
-				<span class="comments">// Jan 1, 2016, I told you I love you. </span><br />
+				<span class="comments">// Dec 2, 2015, You met me in a competition. </span><br />
+				u.meet(i);<br />
+				<span class="comments">// Jan 31, 2016, I told you I love you. </span><br />
 				i.love(u);<br />
 				<span class="comments">// Luckily, you accepted and became my girlfriend eversince.</span><br />
 				u.accepted();<br />
-				<span class="comments">// Since then, I miss u every day.</span><br />
+				<span class="comments">// Since then, u move in my heart and I miss u every day.</span><br />
+				u.moveIn(i.heart);<br />
 				i.miss(u);<br />
 				<span class="comments">// And take care of u and our love.</span><br />
-				i.takeCareOf(u);<br />
-				<span class="comments">// You say that you won't be so easy to marry me.</span><br />
-				<span class="comments">// So I keep waiting and I have confidence that you will.</span><br />
+				i.takeCareOf(u,love);<br />
+				<span class="comments">// You say that we should just let nature take its course.</span><br />
+				<span class="comments">// So I keep waiting and I have confidence that you will marry me.</span><br />
 				<span class="keyword">boolean</span> isHesitate = <span class="keyword">true</span>;<br />
 				<span class="keyword">while</span> (isHesitate) {<br />
 				<span class="placeholder"/>i.waitFor(u);<br />
@@ -74,6 +77,33 @@
 			Copyright © 2011 <a href='http://hackerzhou.me'>hackerzhou.me</a> 2009-2011
 		</div>
 	</div>
+
+	<!-- snow -->
+	<script>
+	  $(document).ready( function() {
+	     $("canvas.flare").let_it_snow({
+  	      windPower: 0,
+  	      speed: 0,
+  	      color: "#E7C3C1",
+  	      size:100,
+  	      opacity: 0.00000001,
+  	      count: 40,
+  	      interaction: false
+  	    });
+  	    $("canvas.snow").let_it_snow({
+    	      windPower: 4,
+    	      speed: 1,
+    	      count: 300,
+    	      size: 1,
+    	  });
+    	  
+	  });
+		</script>
+    <div class="snowcanvas">
+		<canvas width="100%" height="100%" class="flare"></canvas>
+  		<canvas width="100%" height="100%" class="snow"></canvas>
+  	</div>
+
 	<div id="player" class="aplayer"></div>
 	<script type="text/javascript">
 		var offsetX = $("#loveHeart").width() / 2;
@@ -125,30 +155,6 @@
         });
         ap.init();
     </script>
-    <!-- snow -->
-	<script>
-	  $(document).ready( function() {
-	     $("canvas.flare").let_it_snow({
-  	      windPower: 0,
-  	      speed: 0,
-  	      color: "#E7C3C1",
-  	      size:100,
-  	      opacity: 0.00000001,
-  	      count: 40,
-  	      interaction: false
-  	    });
-  	    $("canvas.snow").let_it_snow({
-    	      windPower: 4,
-    	      speed: 1,
-    	      count: 300,
-    	      size: 1,
-    	  });
-    	  
-	  });
-		</script>
-    <div class="snowcanvas">
-		<canvas width="100%" height="100%" class="flare"></canvas>
-  		<canvas width="100%" height="100%" class="snow"></canvas>
-  	</div>
+    
 </body>
 </html>
